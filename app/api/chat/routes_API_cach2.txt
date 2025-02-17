@@ -1,0 +1,13 @@
+
+import { generateResponse } from "deepseek"; // Adjust based on package docs
+
+export async function generateDeepSeekResponse(message: string): Promise<string> {
+  try {
+    // Use the function as documented
+    const response = await generateResponse(message);
+    return response;
+  } catch (error) {
+    console.error("DeepSeek error:", error);
+    return "Sorry, something went wrong.";
+  }
+}
